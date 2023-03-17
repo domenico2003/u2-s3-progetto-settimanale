@@ -1,0 +1,38 @@
+a{
+    text-decoration: none;
+}
+
+header{
+    background-color: #f1c65b;
+}
+body{
+    background-color: #e3e6e6;
+    min-height: 100vh;
+}
+footer{
+    justify-self: flex-end;
+}
+
+.col-personale{
+    max-height: 60%;
+    height: 100%;
+}
+.myimg{
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 25px;
+}
+
+form.validazione input:valid,
+form.validazione textarea:valid {
+    border-color: green;
+}
+
+form.validazione input:invalid,
+form.validazione textarea:invalid {
+    border-color: red;
+}
+
+nav{
+    z-index: 999;
+}
