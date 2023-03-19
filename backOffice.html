@@ -28,7 +28,7 @@
           <form class="row g-3 needs-validation" novalidate >
             <div class="col-md-6">
               <label for="nome" class="form-label">Nome *</label>
-              <input type="text" class="form-control" id="nome" required placeholder="Inserisci il nome del prodotto" >
+              <input type="text" class="form-control " id="nome" required placeholder="Inserisci il nome del prodotto" >
               <div class="invalid-feedback">
                 ATTENZIONE: devi inserire il nome del prodotto!
               </div>
@@ -78,10 +78,16 @@
             </div>
             
             <div class="col-12 mt-5">
-              <button type="submit" class="btn btn-success" id="btnCrea">Crea</button>
-              <button type="button" class="btn btn-warning mx-4 d-none" id="btnResetta">Resetta form</button>
+              <button type="submit" class="btn btn-success" id="btnCrea" >Crea</button>
               
-              <button type="button" class="btn btn-danger d-none" id="btnElimina">Elimina</button>
+              <button type="button" class="btn btn-warning mx-4 d-none" id="resetta-promt"data-bs-toggle="modal" data-bs-target="#resetta">
+                Resetta form
+              </button>
+
+              <button type="button" class="btn btn-danger d-none" id="trigger-promt"data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Elimina
+              </button>
+              
               
             </div>
 
@@ -91,6 +97,44 @@
         </div>
         
       </main>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">!ATTENZIONE!</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body fw-bold">
+              Sei sicuro di voler eliminare l'Articolo? <br>
+               Ricorda, un articolo eliminato non può più essere recuperato
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal">Continua modifiche</button>
+              <button type="button" class="btn btn-danger" id="btnElimina">Elimina</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="resetta" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">!ATTENZIONE!</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body fw-bold">
+              Sei sicuro di voler resettare il form? <br>
+               Ricorda, un form resettato deve essere compilato
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal">Continua modifiche</button>
+              <button type="button" class="btn btn-warning" id="btnResetta" data-bs-dismiss="modal">Resetta form</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
